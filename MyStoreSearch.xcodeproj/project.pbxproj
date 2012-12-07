@@ -1,0 +1,299 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BE4209C4167205310039A925 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE4209C3167205310039A925 /* UIKit.framework */; };
+		BE4209C6167205310039A925 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE4209C5167205310039A925 /* Foundation.framework */; };
+		BE4209C8167205310039A925 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE4209C7167205310039A925 /* CoreGraphics.framework */; };
+		BE4209CE167205310039A925 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BE4209CC167205310039A925 /* InfoPlist.strings */; };
+		BE4209D0167205310039A925 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4209CF167205310039A925 /* main.m */; };
+		BE4209D4167205310039A925 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4209D3167205310039A925 /* AppDelegate.m */; };
+		BE4209D6167205310039A925 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = BE4209D5167205310039A925 /* Default.png */; };
+		BE4209D8167205310039A925 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE4209D7167205310039A925 /* Default@2x.png */; };
+		BE4209DA167205310039A925 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE4209D9167205310039A925 /* Default-568h@2x.png */; };
+		BE4209DD167205310039A925 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4209DC167205310039A925 /* ViewController.m */; };
+		BE4209E0167205310039A925 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE4209DE167205310039A925 /* ViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		BE4209BF167205310039A925 /* MyStoreSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyStoreSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE4209C3167205310039A925 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		BE4209C5167205310039A925 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		BE4209C7167205310039A925 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		BE4209CB167205310039A925 /* MyStoreSearch-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MyStoreSearch-Info.plist"; sourceTree = "<group>"; };
+		BE4209CD167205310039A925 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BE4209CF167205310039A925 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BE4209D1167205310039A925 /* MyStoreSearch-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyStoreSearch-Prefix.pch"; sourceTree = "<group>"; };
+		BE4209D2167205310039A925 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BE4209D3167205310039A925 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BE4209D5167205310039A925 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		BE4209D7167205310039A925 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		BE4209D9167205310039A925 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		BE4209DB167205310039A925 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		BE4209DC167205310039A925 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		BE4209DF167205310039A925 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BE4209BC167205310039A925 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE4209C4167205310039A925 /* UIKit.framework in Frameworks */,
+				BE4209C6167205310039A925 /* Foundation.framework in Frameworks */,
+				BE4209C8167205310039A925 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BE4209B4167205310039A925 = {
+			isa = PBXGroup;
+			children = (
+				BE4209C9167205310039A925 /* MyStoreSearch */,
+				BE4209C2167205310039A925 /* Frameworks */,
+				BE4209C0167205310039A925 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BE4209C0167205310039A925 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BE4209BF167205310039A925 /* MyStoreSearch.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BE4209C2167205310039A925 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BE4209C3167205310039A925 /* UIKit.framework */,
+				BE4209C5167205310039A925 /* Foundation.framework */,
+				BE4209C7167205310039A925 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BE4209C9167205310039A925 /* MyStoreSearch */ = {
+			isa = PBXGroup;
+			children = (
+				BE4209D2167205310039A925 /* AppDelegate.h */,
+				BE4209D3167205310039A925 /* AppDelegate.m */,
+				BE4209DB167205310039A925 /* ViewController.h */,
+				BE4209DC167205310039A925 /* ViewController.m */,
+				BE4209DE167205310039A925 /* ViewController.xib */,
+				BE4209CA167205310039A925 /* Supporting Files */,
+			);
+			path = MyStoreSearch;
+			sourceTree = "<group>";
+		};
+		BE4209CA167205310039A925 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BE4209CB167205310039A925 /* MyStoreSearch-Info.plist */,
+				BE4209CC167205310039A925 /* InfoPlist.strings */,
+				BE4209CF167205310039A925 /* main.m */,
+				BE4209D1167205310039A925 /* MyStoreSearch-Prefix.pch */,
+				BE4209D5167205310039A925 /* Default.png */,
+				BE4209D7167205310039A925 /* Default@2x.png */,
+				BE4209D9167205310039A925 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BE4209BE167205310039A925 /* MyStoreSearch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE4209E3167205310039A925 /* Build configuration list for PBXNativeTarget "MyStoreSearch" */;
+			buildPhases = (
+				BE4209BB167205310039A925 /* Sources */,
+				BE4209BC167205310039A925 /* Frameworks */,
+				BE4209BD167205310039A925 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyStoreSearch;
+			productName = MyStoreSearch;
+			productReference = BE4209BF167205310039A925 /* MyStoreSearch.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BE4209B6167205310039A925 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Xingyin Zhu";
+			};
+			buildConfigurationList = BE4209B9167205310039A925 /* Build configuration list for PBXProject "MyStoreSearch" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = BE4209B4167205310039A925;
+			productRefGroup = BE4209C0167205310039A925 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BE4209BE167205310039A925 /* MyStoreSearch */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BE4209BD167205310039A925 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE4209CE167205310039A925 /* InfoPlist.strings in Resources */,
+				BE4209D6167205310039A925 /* Default.png in Resources */,
+				BE4209D8167205310039A925 /* Default@2x.png in Resources */,
+				BE4209DA167205310039A925 /* Default-568h@2x.png in Resources */,
+				BE4209E0167205310039A925 /* ViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BE4209BB167205310039A925 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE4209D0167205310039A925 /* main.m in Sources */,
+				BE4209D4167205310039A925 /* AppDelegate.m in Sources */,
+				BE4209DD167205310039A925 /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BE4209CC167205310039A925 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BE4209CD167205310039A925 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		BE4209DE167205310039A925 /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BE4209DF167205310039A925 /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BE4209E1167205310039A925 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		BE4209E2167205310039A925 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BE4209E4167205310039A925 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MyStoreSearch/MyStoreSearch-Prefix.pch";
+				INFOPLIST_FILE = "MyStoreSearch/MyStoreSearch-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		BE4209E5167205310039A925 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MyStoreSearch/MyStoreSearch-Prefix.pch";
+				INFOPLIST_FILE = "MyStoreSearch/MyStoreSearch-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BE4209B9167205310039A925 /* Build configuration list for PBXProject "MyStoreSearch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE4209E1167205310039A925 /* Debug */,
+				BE4209E2167205310039A925 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BE4209E3167205310039A925 /* Build configuration list for PBXNativeTarget "MyStoreSearch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE4209E4167205310039A925 /* Debug */,
+				BE4209E5167205310039A925 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BE4209B6167205310039A925 /* Project object */;
+}
