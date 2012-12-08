@@ -8,15 +8,18 @@
 
 #import "AppDelegate.h"
 
-#import "ViewController.h"
+#import "SearchViewController.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    //Changing the look of the search bar
+    [self customizeAppearance];
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
+    self.viewController = [[SearchViewController alloc] initWithNibName:@"SearchViewController" bundle:nil];
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
     return YES;
@@ -47,6 +50,13 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+//Changing the look of the search bar
+- (void)customizeAppearance
+{
+    UIImage *barImage = [UIImage imageNamed:@"BarTexture"];
+    [[UISearchBar appearance] setBackgroundImage:barImage];
 }
 
 @end
