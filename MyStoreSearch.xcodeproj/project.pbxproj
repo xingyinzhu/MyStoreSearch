@@ -19,6 +19,7 @@
 		BE4209DD167205310039A925 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4209DC167205310039A925 /* SearchViewController.m */; };
 		BE4209E0167205310039A925 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE4209DE167205310039A925 /* SearchViewController.xib */; };
 		BE4209F1167231020039A925 /* SearchResult.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4209F0167231020039A925 /* SearchResult.m */; };
+		BE64A396167320CA005F9F48 /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE64A395167320CA005F9F48 /* LoadingCell.xib */; };
 		BEFFB2681672CE200002BF32 /* BarTexture.png in Resources */ = {isa = PBXBuildFile; fileRef = BEFFB2591672CE200002BF32 /* BarTexture.png */; };
 		BEFFB2691672CE200002BF32 /* BarTexture@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BEFFB25A1672CE200002BF32 /* BarTexture@2x.png */; };
 		BEFFB26A1672CE200002BF32 /* CloseButton.png in Resources */ = {isa = PBXBuildFile; fileRef = BEFFB25B1672CE200002BF32 /* CloseButton.png */; };
@@ -67,6 +68,7 @@
 		BE4209DF167205310039A925 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SearchViewController.xib; sourceTree = "<group>"; };
 		BE4209EF167231020039A925 /* SearchResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResult.h; sourceTree = "<group>"; };
 		BE4209F0167231020039A925 /* SearchResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResult.m; sourceTree = "<group>"; };
+		BE64A395167320CA005F9F48 /* LoadingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
 		BEFFB2591672CE200002BF32 /* BarTexture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BarTexture.png; sourceTree = "<group>"; };
 		BEFFB25A1672CE200002BF32 /* BarTexture@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BarTexture@2x.png"; sourceTree = "<group>"; };
 		BEFFB25B1672CE200002BF32 /* CloseButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseButton.png; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				BE4209D2167205310039A925 /* AppDelegate.h */,
+				BE64A395167320CA005F9F48 /* LoadingCell.xib */,
 				BE4209D3167205310039A925 /* AppDelegate.m */,
 				BE4209DB167205310039A925 /* SearchViewController.h */,
 				BE4209DC167205310039A925 /* SearchViewController.m */,
@@ -293,6 +296,7 @@
 				BEFFB28F1672D9850002BF32 /* Icon.png in Resources */,
 				BEFFB2901672D9850002BF32 /* Icon@2x.png in Resources */,
 				BEFFB2911672D9850002BF32 /* iTunesArtwork in Resources */,
+				BE64A396167320CA005F9F48 /* LoadingCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
