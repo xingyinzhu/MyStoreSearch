@@ -131,6 +131,10 @@ static NSString *const LoadingCellIdentifier = @"LoadingCell";
     //return nil;
 }
 
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation) interfaceOrientation
+{
+    return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+}
 
 - (NSURL *)urlWithSearchText:(NSString *)searchText category:(NSInteger)category
 {
@@ -309,7 +313,6 @@ static NSString *const LoadingCellIdentifier = @"LoadingCell";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     //[self.searchBar resignFirstResponder];
-    
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     DetailViewController *controller = [[DetailViewController alloc]initWithNibName:@"DetailViewController" bundle:nil];
@@ -318,10 +321,7 @@ static NSString *const LoadingCellIdentifier = @"LoadingCell";
     SearchResult *searchResult = [searchResults objectAtIndex:indexPath.row];
     controller.searchResult = searchResult;
     
-    //Using the view controller containment APIs
-    [self.view addSubview:controller.view];
-    [self addChildViewController:controller];
-    [controller didMoveToParentViewController:self];
+    [controller presentInParentViewController:self];
 }
 
 - (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath

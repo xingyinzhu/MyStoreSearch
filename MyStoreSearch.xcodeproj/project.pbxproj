@@ -10,6 +10,7 @@
 		BE1DE6671674266200EA10EC /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1DE6651674266200EA10EC /* DetailViewController.m */; };
 		BE1DE6681674266200EA10EC /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE1DE6661674266200EA10EC /* DetailViewController.xib */; };
 		BE1DE66F1674379400EA10EC /* GradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1DE66E1674379400EA10EC /* GradientView.m */; };
+		BE1DE671167448B100EA10EC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE1DE670167448B100EA10EC /* QuartzCore.framework */; };
 		BE3641BF167379560023B971 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = BE3641BD167379560023B971 /* Default.png */; };
 		BE3641C0167379560023B971 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE3641BE167379560023B971 /* Default@2x.png */; };
 		BE4209C4167205310039A925 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE4209C3167205310039A925 /* UIKit.framework */; };
@@ -70,6 +71,7 @@
 		BE1DE6661674266200EA10EC /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		BE1DE66D1674379400EA10EC /* GradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradientView.h; sourceTree = "<group>"; };
 		BE1DE66E1674379400EA10EC /* GradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GradientView.m; sourceTree = "<group>"; };
+		BE1DE670167448B100EA10EC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		BE3641BD167379560023B971 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		BE3641BE167379560023B971 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		BE4209BF167205310039A925 /* MyStoreSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyStoreSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -148,6 +150,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE1DE671167448B100EA10EC /* QuartzCore.framework in Frameworks */,
 				BE4209C4167205310039A925 /* UIKit.framework in Frameworks */,
 				BE4209C6167205310039A925 /* Foundation.framework in Frameworks */,
 				BE4209C8167205310039A925 /* CoreGraphics.framework in Frameworks */,
@@ -169,6 +172,7 @@
 		BE4209B4167205310039A925 = {
 			isa = PBXGroup;
 			children = (
+				BE1DE670167448B100EA10EC /* QuartzCore.framework */,
 				BE3641BC167379560023B971 /* Launch Images */,
 				BE64A39816735AC8005F9F48 /* AFNetworking */,
 				BEFFB27F1672D9850002BF32 /* Icon */,

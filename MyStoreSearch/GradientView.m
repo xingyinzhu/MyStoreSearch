@@ -15,6 +15,7 @@
     if ((self = [super initWithFrame:frame]))
     {
         self.backgroundColor = [UIColor clearColor];
+        self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     }
     return self;
 }
@@ -45,5 +46,10 @@
     // Drawing code
 }
 */
+- (void)dealloc
+{
+    NSLog(@"dealloc %@", self);
+}
+
 
 @end
