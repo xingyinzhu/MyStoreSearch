@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		BE1DE6671674266200EA10EC /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1DE6651674266200EA10EC /* DetailViewController.m */; };
 		BE1DE6681674266200EA10EC /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE1DE6661674266200EA10EC /* DetailViewController.xib */; };
+		BE1DE66F1674379400EA10EC /* GradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1DE66E1674379400EA10EC /* GradientView.m */; };
 		BE3641BF167379560023B971 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = BE3641BD167379560023B971 /* Default.png */; };
 		BE3641C0167379560023B971 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE3641BE167379560023B971 /* Default@2x.png */; };
 		BE4209C4167205310039A925 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE4209C3167205310039A925 /* UIKit.framework */; };
@@ -67,6 +68,8 @@
 		BE1DE6641674266200EA10EC /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		BE1DE6651674266200EA10EC /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		BE1DE6661674266200EA10EC /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		BE1DE66D1674379400EA10EC /* GradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradientView.h; sourceTree = "<group>"; };
+		BE1DE66E1674379400EA10EC /* GradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GradientView.m; sourceTree = "<group>"; };
 		BE3641BD167379560023B971 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		BE3641BE167379560023B971 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		BE4209BF167205310039A925 /* MyStoreSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyStoreSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -203,6 +206,8 @@
 				BE1DE6651674266200EA10EC /* DetailViewController.m */,
 				BE1DE6661674266200EA10EC /* DetailViewController.xib */,
 				BE4209D3167205310039A925 /* AppDelegate.m */,
+				BE1DE66D1674379400EA10EC /* GradientView.h */,
+				BE1DE66E1674379400EA10EC /* GradientView.m */,
 				BE4209DB167205310039A925 /* SearchViewController.h */,
 				BE4209DC167205310039A925 /* SearchViewController.m */,
 				BE4209EF167231020039A925 /* SearchResult.h */,
@@ -410,6 +415,7 @@
 				BE64A3B716735AC8005F9F48 /* AFXMLRequestOperation.m in Sources */,
 				BE64A3B816735AC8005F9F48 /* UIImageView+AFNetworking.m in Sources */,
 				BE1DE6671674266200EA10EC /* DetailViewController.m in Sources */,
+				BE1DE66F1674379400EA10EC /* GradientView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
