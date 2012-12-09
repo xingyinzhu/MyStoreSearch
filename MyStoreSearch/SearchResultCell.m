@@ -98,7 +98,8 @@
 - (void)configureForSearchResult:(SearchResult *)searchResult
 {
     self.nameLabel.text = searchResult.name;
-    NSString *artistName = searchResult.artistName; if (artistName == nil)
+    NSString *artistName = searchResult.artistName;
+    if (artistName == nil)
     {
         artistName = @"Unknown";
     }

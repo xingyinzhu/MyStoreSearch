@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE1DE6671674266200EA10EC /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1DE6651674266200EA10EC /* DetailViewController.m */; };
+		BE1DE6681674266200EA10EC /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE1DE6661674266200EA10EC /* DetailViewController.xib */; };
 		BE3641BF167379560023B971 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = BE3641BD167379560023B971 /* Default.png */; };
 		BE3641C0167379560023B971 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE3641BE167379560023B971 /* Default@2x.png */; };
 		BE4209C4167205310039A925 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE4209C3167205310039A925 /* UIKit.framework */; };
@@ -62,6 +64,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BE1DE6641674266200EA10EC /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		BE1DE6651674266200EA10EC /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		BE1DE6661674266200EA10EC /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		BE3641BD167379560023B971 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		BE3641BE167379560023B971 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		BE4209BF167205310039A925 /* MyStoreSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyStoreSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -194,6 +199,9 @@
 			children = (
 				BE4209D2167205310039A925 /* AppDelegate.h */,
 				BE64A395167320CA005F9F48 /* LoadingCell.xib */,
+				BE1DE6641674266200EA10EC /* DetailViewController.h */,
+				BE1DE6651674266200EA10EC /* DetailViewController.m */,
+				BE1DE6661674266200EA10EC /* DetailViewController.xib */,
 				BE4209D3167205310039A925 /* AppDelegate.m */,
 				BE4209DB167205310039A925 /* SearchViewController.h */,
 				BE4209DC167205310039A925 /* SearchViewController.m */,
@@ -375,6 +383,7 @@
 				BE64A396167320CA005F9F48 /* LoadingCell.xib in Resources */,
 				BE3641BF167379560023B971 /* Default.png in Resources */,
 				BE3641C0167379560023B971 /* Default@2x.png in Resources */,
+				BE1DE6681674266200EA10EC /* DetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,6 +409,7 @@
 				BE64A3B616735AC8005F9F48 /* AFURLConnectionOperation.m in Sources */,
 				BE64A3B716735AC8005F9F48 /* AFXMLRequestOperation.m in Sources */,
 				BE64A3B816735AC8005F9F48 /* UIImageView+AFNetworking.m in Sources */,
+				BE1DE6671674266200EA10EC /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
