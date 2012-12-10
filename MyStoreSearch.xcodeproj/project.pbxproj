@@ -36,6 +36,8 @@
 		BE64A3B616735AC8005F9F48 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = BE64A3AA16735AC8005F9F48 /* AFURLConnectionOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		BE64A3B716735AC8005F9F48 /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = BE64A3AC16735AC8005F9F48 /* AFXMLRequestOperation.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -Wno-unused"; }; };
 		BE64A3B816735AC8005F9F48 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = BE64A3AE16735AC8005F9F48 /* UIImageView+AFNetworking.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		BEE268691674AECF00E5C9EC /* LandscapeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEE268671674AECF00E5C9EC /* LandscapeViewController.m */; };
+		BEE2686A1674AECF00E5C9EC /* LandscapeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEE268681674AECF00E5C9EC /* LandscapeViewController.xib */; };
 		BEFFB2681672CE200002BF32 /* BarTexture.png in Resources */ = {isa = PBXBuildFile; fileRef = BEFFB2591672CE200002BF32 /* BarTexture.png */; };
 		BEFFB2691672CE200002BF32 /* BarTexture@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BEFFB25A1672CE200002BF32 /* BarTexture@2x.png */; };
 		BEFFB26A1672CE200002BF32 /* CloseButton.png in Resources */ = {isa = PBXBuildFile; fileRef = BEFFB25B1672CE200002BF32 /* CloseButton.png */; };
@@ -115,6 +117,9 @@
 		BE64A3AC16735AC8005F9F48 /* AFXMLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFXMLRequestOperation.m; sourceTree = "<group>"; };
 		BE64A3AD16735AC8005F9F48 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
 		BE64A3AE16735AC8005F9F48 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
+		BEE268661674AECF00E5C9EC /* LandscapeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LandscapeViewController.h; sourceTree = "<group>"; };
+		BEE268671674AECF00E5C9EC /* LandscapeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LandscapeViewController.m; sourceTree = "<group>"; };
+		BEE268681674AECF00E5C9EC /* LandscapeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LandscapeViewController.xib; sourceTree = "<group>"; };
 		BEFFB2591672CE200002BF32 /* BarTexture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BarTexture.png; sourceTree = "<group>"; };
 		BEFFB25A1672CE200002BF32 /* BarTexture@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BarTexture@2x.png"; sourceTree = "<group>"; };
 		BEFFB25B1672CE200002BF32 /* CloseButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseButton.png; sourceTree = "<group>"; };
@@ -205,18 +210,21 @@
 			isa = PBXGroup;
 			children = (
 				BE4209D2167205310039A925 /* AppDelegate.h */,
+				BE4209D3167205310039A925 /* AppDelegate.m */,
 				BE64A395167320CA005F9F48 /* LoadingCell.xib */,
 				BE1DE6641674266200EA10EC /* DetailViewController.h */,
 				BE1DE6651674266200EA10EC /* DetailViewController.m */,
 				BE1DE6661674266200EA10EC /* DetailViewController.xib */,
-				BE4209D3167205310039A925 /* AppDelegate.m */,
+				BEE268661674AECF00E5C9EC /* LandscapeViewController.h */,
+				BEE268671674AECF00E5C9EC /* LandscapeViewController.m */,
+				BEE268681674AECF00E5C9EC /* LandscapeViewController.xib */,
 				BE1DE66D1674379400EA10EC /* GradientView.h */,
 				BE1DE66E1674379400EA10EC /* GradientView.m */,
 				BE4209DB167205310039A925 /* SearchViewController.h */,
 				BE4209DC167205310039A925 /* SearchViewController.m */,
+				BE4209DE167205310039A925 /* SearchViewController.xib */,
 				BE4209EF167231020039A925 /* SearchResult.h */,
 				BE4209F0167231020039A925 /* SearchResult.m */,
-				BE4209DE167205310039A925 /* SearchViewController.xib */,
 				BEFFB2781672CE650002BF32 /* SearchResultCell.xib */,
 				BEFFB27A1672D1C50002BF32 /* SearchResultCell.h */,
 				BEFFB27B1672D1C50002BF32 /* SearchResultCell.m */,
@@ -393,6 +401,7 @@
 				BE3641BF167379560023B971 /* Default.png in Resources */,
 				BE3641C0167379560023B971 /* Default@2x.png in Resources */,
 				BE1DE6681674266200EA10EC /* DetailViewController.xib in Resources */,
+				BEE2686A1674AECF00E5C9EC /* LandscapeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,6 +429,7 @@
 				BE64A3B816735AC8005F9F48 /* UIImageView+AFNetworking.m in Sources */,
 				BE1DE6671674266200EA10EC /* DetailViewController.m in Sources */,
 				BE1DE66F1674379400EA10EC /* GradientView.m in Sources */,
+				BEE268691674AECF00E5C9EC /* LandscapeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

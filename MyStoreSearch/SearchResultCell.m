@@ -48,7 +48,6 @@
 
 
 
-
 - (void)configureForSearchResult:(SearchResult *)searchResult
 {
     self.nameLabel.text = searchResult.name;

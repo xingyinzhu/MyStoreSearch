@@ -12,6 +12,8 @@
 #import "AFJSONRequestOperation.h"
 #import "AFImageCache.h"
 #import "DetailViewController.h"
+#import "LandscapeViewController.h"
+#import "DetailViewController.h"
 
 static NSString *const SearchResultCellIdentifier = @"SearchResultCell";
 static NSString *const NothingFoundCellIdentifier = @"NothingFoundCell";
@@ -32,11 +34,78 @@ static NSString *const LoadingCellIdentifier = @"LoadingCell";
     NSMutableArray *searchResults;
     BOOL isLoading;
     NSOperationQueue *queue;
+    LandscapeViewController *landscapeViewController;
+    
+    //prevent a memory leak
+    __weak DetailViewController *detailViewController;
 }
 
 @synthesize searchBar = _searchBar;
 @synthesize tableView = _tableView;
 @synthesize segmentedControl = _segmentedControl;
+
+- (void)showLandscapeViewWithDuration:(NSTimeInterval)duration
+{
+    if (landscapeViewController == nil)
+    {
+        landscapeViewController = [[LandscapeViewController alloc] initWithNibName:@"LandscapeViewController" bundle:nil];
+        landscapeViewController.view.frame = self.view.bounds;
+        landscapeViewController.view.alpha = 0.0f;
+        
+        [self.view addSubview:landscapeViewController.view];
+        [self addChildViewController:landscapeViewController];
+        
+        [UIView animateWithDuration:duration animations:
+        ^{
+            landscapeViewController.view.alpha = 1.0f;
+        } completion:^(BOOL finished)
+        {
+            [landscapeViewController didMoveToParentViewController:self];
+        }];
+        
+        [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackOpaque animated:YES];
+        //[landscapeViewController didMoveToParentViewController:self];
+        
+        //dismiss the keyboard
+        [self.searchBar resignFirstResponder];
+        [detailViewController dismissFromParentViewControllerWithAnimationType:DetailViewControllerAnimationTypeFade];
+    }
+}
+
+- (void)hideLandscapeViewWithDuration:(NSTimeInterval)duration
+{
+    if (landscapeViewController != nil)
+    {
+        [landscapeViewController willMoveToParentViewController:nil];
+        
+        [UIView animateWithDuration:duration animations:
+         ^{
+            landscapeViewController.view.alpha = 0.0f;
+        }
+        completion:^(BOOL finished)
+        {
+            [landscapeViewController.view removeFromSuperview];
+            [landscapeViewController removeFromParentViewController];
+            landscapeViewController = nil;
+        }];
+        
+        [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackOpaque animated:YES];
+    }
+}
+
+- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+{
+    [super willRotateToInterfaceOrientation:toInterfaceOrientation duration:duration];
+    
+    if (UIInterfaceOrientationIsPortrait(toInterfaceOrientation))
+    {
+        [self hideLandscapeViewWithDuration:duration];
+    }
+    else
+    {
+        [self showLandscapeViewWithDuration:duration];
+    }
+}
 
 - (IBAction)segmentChanged:(UISegmentedControl *)sender
 {
@@ -312,7 +381,7 @@ static NSString *const LoadingCellIdentifier = @"LoadingCell";
 #pragma mark - UITableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    //[self.searchBar resignFirstResponder];
+    [self.searchBar resignFirstResponder];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     DetailViewController *controller = [[DetailViewController alloc]initWithNibName:@"DetailViewController" bundle:nil];
@@ -322,6 +391,7 @@ static NSString *const LoadingCellIdentifier = @"LoadingCell";
     controller.searchResult = searchResult;
     
     [controller presentInParentViewController:self];
+    detailViewController = controller;
 }
 
 - (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath

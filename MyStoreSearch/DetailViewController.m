@@ -13,9 +13,13 @@
 #import "UIImageView+AFNetworking.h"
 #import "GradientView.h"
 
+
+
+
 @interface DetailViewController ()
 {
     GradientView *gradientView;
+    
 }
 
 @property (nonatomic, weak) IBOutlet UIImageView *artworkImageView;
@@ -67,16 +71,18 @@
     CGRect rect = self.closeButton.frame;
     if (UIInterfaceOrientationIsPortrait(interfaceOrientation))
     {
-        rect.origin = CGPointMake(28, 57);
+        rect.origin = CGPointMake(28, 87);
     } else {
-        rect.origin = CGPointMake(108, 0);
+        rect.origin = CGPointMake(108, 7);
     }
     self.closeButton.frame = rect;
 }
 
+
 - (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
 {
     [super willRotateToInterfaceOrientation:toInterfaceOrientation duration:duration];
+    
     [self layoutForInterfaceOrientation:toInterfaceOrientation];
 }
 
@@ -133,8 +139,10 @@
 - (IBAction)close:(id)sender
 {
     //[self dismissViewControllerAnimated:YES completion:nil];
-    [self dismissFromParentViewController];
+    //[self dismissFromParentViewController];
+    [self dismissFromParentViewControllerWithAnimationType:DetailViewControllerAnimationTypeSlide];
 }
+
 
 - (void)dismissFromParentViewController
 {
@@ -159,6 +167,31 @@
     [gradientView removeFromSuperview];
     [self removeFromParentViewController];
      */
+}
+
+- (void)dismissFromParentViewControllerWithAnimationType:(DetailViewControllerAnimationType)animationType
+{
+    [self willMoveToParentViewController:nil];
+    [UIView animateWithDuration:0.4 animations:
+     ^{
+        if (animationType == DetailViewControllerAnimationTypeSlide)
+        {
+            CGRect rect = self.view.bounds;
+            rect.origin.y += rect.size.height;
+            self.view.frame = rect;
+        }
+        else
+        {
+            self.view.alpha = 0.0f;
+        }
+        gradientView.alpha = 0.0f;
+    }
+    completion:^(BOOL finished)
+    {
+        [self.view removeFromSuperview];
+        [gradientView removeFromSuperview];
+        [self removeFromParentViewController];
+    }];
 }
 
 
