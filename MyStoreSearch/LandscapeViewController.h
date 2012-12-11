@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+@class Search;
 
 //We’re going to make the view controller the delegate of the scroll view so we will be notified when the user is flicking through the pages.
 @interface LandscapeViewController : UIViewController<UIScrollViewDelegate>
 
-@property (nonatomic, strong) NSArray *searchResults;
+@property (nonatomic, strong) Search *search;
 
+- (void)searchResultsReceived;
 @end

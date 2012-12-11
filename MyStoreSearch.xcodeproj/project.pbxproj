@@ -38,6 +38,7 @@
 		BE64A3B816735AC8005F9F48 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = BE64A3AE16735AC8005F9F48 /* UIImageView+AFNetworking.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		BEE268691674AECF00E5C9EC /* LandscapeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEE268671674AECF00E5C9EC /* LandscapeViewController.m */; };
 		BEE2686A1674AECF00E5C9EC /* LandscapeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEE268681674AECF00E5C9EC /* LandscapeViewController.xib */; };
+		BEF0D7E416774EF900143E4E /* Search.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF0D7E316774EF900143E4E /* Search.m */; };
 		BEFFB2681672CE200002BF32 /* BarTexture.png in Resources */ = {isa = PBXBuildFile; fileRef = BEFFB2591672CE200002BF32 /* BarTexture.png */; };
 		BEFFB2691672CE200002BF32 /* BarTexture@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BEFFB25A1672CE200002BF32 /* BarTexture@2x.png */; };
 		BEFFB26A1672CE200002BF32 /* CloseButton.png in Resources */ = {isa = PBXBuildFile; fileRef = BEFFB25B1672CE200002BF32 /* CloseButton.png */; };
@@ -120,6 +121,8 @@
 		BEE268661674AECF00E5C9EC /* LandscapeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LandscapeViewController.h; sourceTree = "<group>"; };
 		BEE268671674AECF00E5C9EC /* LandscapeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LandscapeViewController.m; sourceTree = "<group>"; };
 		BEE268681674AECF00E5C9EC /* LandscapeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LandscapeViewController.xib; sourceTree = "<group>"; };
+		BEF0D7E216774EF900143E4E /* Search.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Search.h; sourceTree = "<group>"; };
+		BEF0D7E316774EF900143E4E /* Search.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Search.m; sourceTree = "<group>"; };
 		BEFFB2591672CE200002BF32 /* BarTexture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BarTexture.png; sourceTree = "<group>"; };
 		BEFFB25A1672CE200002BF32 /* BarTexture@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BarTexture@2x.png"; sourceTree = "<group>"; };
 		BEFFB25B1672CE200002BF32 /* CloseButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseButton.png; sourceTree = "<group>"; };
@@ -217,6 +220,8 @@
 				BE1DE6661674266200EA10EC /* DetailViewController.xib */,
 				BEE268661674AECF00E5C9EC /* LandscapeViewController.h */,
 				BEE268671674AECF00E5C9EC /* LandscapeViewController.m */,
+				BEF0D7E216774EF900143E4E /* Search.h */,
+				BEF0D7E316774EF900143E4E /* Search.m */,
 				BEE268681674AECF00E5C9EC /* LandscapeViewController.xib */,
 				BE1DE66D1674379400EA10EC /* GradientView.h */,
 				BE1DE66E1674379400EA10EC /* GradientView.m */,
@@ -430,6 +435,7 @@
 				BE1DE6671674266200EA10EC /* DetailViewController.m in Sources */,
 				BE1DE66F1674379400EA10EC /* GradientView.m in Sources */,
 				BEE268691674AECF00E5C9EC /* LandscapeViewController.m in Sources */,
+				BEF0D7E416774EF900143E4E /* Search.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

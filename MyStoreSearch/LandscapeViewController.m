@@ -9,6 +9,8 @@
 #import "LandscapeViewController.h"
 #import "SearchResult.h"
 #import "AFImageCache.h"
+#import "Search.h"
+#import "DetailViewController.h"
 
 @interface LandscapeViewController ()
 
@@ -25,7 +27,7 @@
 
 @synthesize scrollView = _scrollView;
 @synthesize pageControl = _pageControl;
-@synthesize searchResults = _searchResults;
+@synthesize search = _search;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -38,14 +40,79 @@
     return self;
 }
 
+//creates a new UIActivityIndicatorView object 
+- (void)showSpinner
+{
+    UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    spinner.center = CGPointMake(CGRectGetMidX(self.scrollView.bounds) + 0.5f, CGRectGetMidY(self.scrollView.bounds) + 0.5f);
+    spinner.tag = 1000;
+    [self.view addSubview:spinner];
+    [spinner startAnimating];
+}
+
+- (void)hideSpinner
+{
+    [[self.view viewWithTag:1000] removeFromSuperview];
+}
+
+- (void)searchResultsReceived
+{
+    [self hideSpinner];
+    
+    if ([self.search.searchResults count] == 0)
+    {
+        [self showNothingFoundLabel];
+    }
+    else
+    {
+        [self tileButtons];
+    }
+}
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
     self.scrollView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"LandscapeBackground"]];
     
-    //self.scrollView.contentSize = CGSizeMake(1000, self.scrollView.bounds.size.height);
+    if (self.search != nil)
+    {
+        if (self.search.isLoading)
+        {
+            [self showSpinner];
+        }
+        else if ([self.search.searchResults count] == 0)
+        {
+            [self showNothingFoundLabel];
+        }
+        else
+        {
+            [self tileButtons];
+        }
+    }
     [self tileButtons];
+    
+    self.pageControl.numberOfPages = 1;
+    self.pageControl.currentPage = 0;
+}
+
+- (void)showNothingFoundLabel
+{
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectZero];
+    label.text = @"Nothing Found";
+    label.backgroundColor = [UIColor clearColor];
+    label.textColor = [UIColor whiteColor];
+    
+    [label sizeToFit];
+    CGRect rect = label.frame;
+    rect.size.width = ceilf(rect.size.width/2.0f) * 2.0f; // make even
+    rect.size.height = ceilf(rect.size.height/2.0f) * 2.0f; // make even
+    label.frame = rect;
+    label.center = CGPointMake(CGRectGetMidX(self.scrollView.bounds),
+                               CGRectGetMidY(self.scrollView.bounds));
+    
+    [self.view addSubview:label];
 }
 
 - (void)didReceiveMemoryWarning
@@ -78,12 +145,15 @@
     int row = 0;
     int column = 0;
     
-    for (SearchResult *searchResult in self.searchResults)
+    for (SearchResult *searchResult in self.search.searchResults)
     {
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
         button.frame = CGRectMake(column*itemWidth + marginHorz, row*itemHeight + marginVert, buttonWidth, buttonHeight);
         [button setBackgroundImage:[UIImage imageNamed:@"LandscapeButton"] forState:UIControlStateNormal];
         //[button setTitle:[NSString stringWithFormat:@"%d", index] forState:UIControlStateNormal];
+        
+        button.tag = 2000 + index;
+        [button addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside];
         [self.scrollView addSubview:button];
         
         [self downloadImageForSearchResult:searchResult andPlaceOnButton:button];
@@ -97,13 +167,22 @@
         }
     }
     
-    int numPages = ceilf([self.searchResults count] / 15.0f);
+    int numPages = ceilf([self.search.searchResults count] / 15.0f);
     self.scrollView.contentSize = CGSizeMake(numPages*480.0f, self.scrollView.bounds.size.height);
     
     self.pageControl.numberOfPages = numPages;
     self.pageControl.currentPage = 0;
     
     NSLog(@"Number of pages: %d", numPages);
+}
+
+- (void)buttonPressed:(UIButton *)sender
+{
+    DetailViewController *controller = [[DetailViewController alloc]initWithNibName:@"DetailViewController" bundle:nil];
+    SearchResult *searchResult = [self.search.searchResults objectAtIndex:sender.tag - 2000];
+    controller.searchResult = searchResult;
+    
+    [controller presentInParentViewController:self];
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)theScrollView
