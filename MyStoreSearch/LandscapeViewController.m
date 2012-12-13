@@ -100,7 +100,7 @@
 - (void)showNothingFoundLabel
 {
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectZero];
-    label.text = @"Nothing Found";
+    label.text = NSLocalizedString(@"Nothing Found", @"Nothing Found label");
     label.backgroundColor = [UIColor clearColor];
     label.textColor = [UIColor whiteColor];
     
